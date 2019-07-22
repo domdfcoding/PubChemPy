@@ -7,11 +7,6 @@ Test assay object.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
-
 import pytest
 
 from pubchempy import *
@@ -20,12 +15,12 @@ from pubchempy import *
 @pytest.fixture(scope='module')
 def a1():
     """Assay AID 490."""
-    return Assay.from_aid(490)
+    return Assay.from_aid(10000)
 
 
 def test_basic(a1):
-    assert a1.aid == 490
-    assert repr(a1) == 'Assay(490)'
+    assert a1.aid == 10000
+    assert repr(a1) == 'Assay(10000)'
     assert a1.record
 
 
@@ -37,7 +32,7 @@ def test_meta(a1):
 
 
 def test_assay_equality():
-    first = Assay.from_aid(490)
+    first = Assay.from_aid(10000)
     second = Assay.from_aid(1000)
     assert first == first
     assert second == second

@@ -1,5 +1,12 @@
 # Change Log
 
+Changed print statements to print function and removed `__future__` imports etc. to remove Python 2 support
+
+Change to test `test_no_identifiers` as the compound with CID 150194 now has an assay record linked to it. The new CID, 150195, does not have an assay
+
+Change to assay tests as assay 490 has been revoked, causing an error. New AID 10000 is live   
+
+
 ## [v1.0.4](https://github.com/mcs07/PubChemPy/releases/tag/v1.0.4) (2017-04-11)
 [Full Changelog](https://github.com/mcs07/PubChemPy/compare/v1.0.3...v1.0.4)
 

@@ -6,10 +6,6 @@ Python interface for the PubChem PUG REST service.
 https://github.com/mcs07/PubChemPy
 """
 
-from __future__ import print_function
-from __future__ import unicode_literals
-from __future__ import division
-
 import functools
 import json
 import logging
@@ -19,18 +15,11 @@ import time
 import warnings
 import binascii
 
-try:
-    from urllib.error import HTTPError
-    from urllib.parse import quote, urlencode
-    from urllib.request import urlopen
-except ImportError:
-    from urllib import urlencode
-    from urllib2 import quote, urlopen, HTTPError
+from urllib.error import HTTPError
+from urllib.parse import quote, urlencode
+from urllib.request import urlopen
 
-try:
-    from itertools import zip_longest
-except ImportError:
-    from itertools import izip_longest as zip_longest
+from itertools import zip_longest
 
 
 __author__ = 'Matt Swain'
@@ -44,10 +33,8 @@ log = logging.getLogger('pubchempy')
 log.addHandler(logging.NullHandler())
 
 
-if sys.version_info[0] == 3:
-    text_types = str, bytes
-else:
-    text_types = basestring,
+text_types = str, bytes
+
 
 
 class CompoundIdType(object):
